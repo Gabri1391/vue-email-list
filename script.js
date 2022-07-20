@@ -8,13 +8,13 @@ const root = new Vue ({
     },
     methods: {
         getRandomMail(){
-            for(let i = 0; i < 10; i++){
+            for(let i = 0; i < this.items; i++){
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').
                 then((res) => {
                     const mail = res.data.response
                     this.randomMailsArray.push(mail)
                    
-                    console.log(randomMailsArray)
+                    console.log(this.randomMailsArray)
                 });
             };
         }

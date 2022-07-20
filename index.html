@@ -15,10 +15,11 @@
 <body>
     <div class="container">
         <div id="root">
-            <ul>
+            <h1 class="mt-3">Mail List</h1>
+            <ul v-if="randomMailsArray.length === 10">
                 <li v-for="mail in randomMailsArray">{{mail}}</li>
             </ul>
-            <button @click="getRandomMail">Genera 10 mail random</button>
+            <button v-if="randomMailsArray.length !== 10" @click="getRandomMail">Genera 10 mail random</button>
         </div>
     </div>
     <script src="script.js"></script>
