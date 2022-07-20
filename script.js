@@ -4,7 +4,6 @@ const root = new Vue ({
     el: '#root',
     data:{
         items: 10,
-        mail:'',
         randomMailsArray: []
     },
     methods: {
